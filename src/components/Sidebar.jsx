@@ -2,47 +2,53 @@
 import { NavLink } from 'react-router-dom';
 
 const opciones = [
-    { ruta: '/', nombre: 'Inicio', icono: '⌂', exact: true },
-    { ruta: '/generos', nombre: 'Géneros', icono: '▤' },
-    { ruta: '/directores', nombre: 'Directores', icono: '♟' },
-    { ruta: '/productoras', nombre: 'Productoras', icono: '▣' },
-    { ruta: '/tipos', nombre: 'Tipos', icono: '◫' },
-    { ruta: '/media', nombre: 'Películas y series', icono: '▶' }
+    { ruta: '/', nombre: 'Inicio', icono: 'bi-house-door', exact: true },
+    { ruta: '/generos', nombre: 'Géneros', icono: 'bi-collection' },
+    { ruta: '/directores', nombre: 'Directores', icono: 'bi-camera-reels' },
+    { ruta: '/productoras', nombre: 'Productoras', icono: 'bi-building' },
+    { ruta: '/tipos', nombre: 'Tipos', icono: 'bi-grid' },
+    { ruta: '/media', nombre: 'Películas y series', icono: 'bi-play-circle' }
 ];
 
 function Sidebar() {
     return (
-        <aside className="sidebar">
-            <div className="brand">
-                <div className="brand-icon">🎬</div>
-                <div>
-                    <h2>CINE IU</h2>
-                    <span>DIGITAL</span>
+        <header className="main-navbar">
+            <div className="navbar-brand">
+                <div className="brand-text">
+                    <h2>CINE <span>IU</span></h2>
+                    <small>DIGITAL</small>
                 </div>
             </div>
 
-            <div className="menu-label">MENÚ PRINCIPAL</div>
-
-            <nav className="sidebar-menu">
+            <nav className="navbar-menu">
                 {opciones.map((opcion) => (
                     <NavLink
                         key={opcion.ruta}
                         to={opcion.ruta}
                         exact={opcion.exact}
-                        className="menu-link"
+                        className="navbar-link"
                         activeClassName="active"
                     >
-                        <span className="menu-icon">{opcion.icono}</span>
-                        {opcion.nombre}
+                        <i className={`bi ${opcion.icono}`}></i>
+                        <span>{opcion.nombre}</span>
                     </NavLink>
                 ))}
             </nav>
 
-            <div className="sidebar-footer">
-                <span>Proyecto académico</span>
-                <strong>IU Digital de Antioquia</strong>
+            <div className="navbar-user">
+                <div className="user-info">
+                    <strong>Administrador</strong>
+                    <small>Panel de gestión</small>
+                </div>
+
+                <div className="user-avatar">
+                    <img
+                        src="/src/assets/logo.jpeg"
+                        alt="Logo IU Digital"
+                    />
+                </div>
             </div>
-        </aside>
+        </header>
     );
 }
 

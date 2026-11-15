@@ -138,16 +138,20 @@ function Tipos() {
     );
 
     return (
-        <div className="module-container">
+        <div>
+            <div className="page-heading">
+                <span className="eyebrow">GESTIÓN DEL CATÁLOGO</span>
+                <h1>Tipos</h1>
+                <p>Administra los tipos de contenido del catálogo.</p>
+            </div>
+
             <div className="generos-summary">
                 <div>
-                    <h2>Gestión de tipos</h2>
-                    <p>Administra los tipos de contenido del catálogo.</p>
-                </div>
-                <div className="summary-number">
-                    <span>Total de tipos</span>
+                    <span className="summary-label">GESTIÓN DE TIPOS</span>
                     <strong>{tipos.length}</strong>
                 </div>
+
+                <div className="summary-icon">◫</div>
             </div>
 
             <section className="module-card">
@@ -253,9 +257,9 @@ function Tipos() {
                                                     className="btn-edit"
                                                     onClick={() => prepararEdicion(tipo)}
                                                     type="button"
-                                                    title="Editar"
+                                                    title=""
                                                 >
-                                                    Editar
+                                                    ✎
                                                 </button>
 
                                                 <button
@@ -263,7 +267,7 @@ function Tipos() {
                                                     onClick={() => eliminarTipo(tipo)}
                                                     type="button"
                                                 >
-                                                    Eliminar
+                                                    🗑
                                                 </button>
                                             </div>
                                         </td>

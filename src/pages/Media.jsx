@@ -212,18 +212,21 @@ function Media() {
     );
 
     return (
-        <div className="module-container">
+        <div>
+            <div className="page-heading">
+            <span className='eyebrow'>GESTIÓN DEL CATÁLOGO</span>
+            <h1>Películas y Series</h1>
+            <p>Administra las películas y series del catálogo.</p>
+            </div>
 
             <div className="generos-summary">
                 <div>
-                    <h2>Gestión de Media</h2>
-                    <p>Administra las películas y series del catálogo.</p>
-                </div>
-
-                <div className="summary-number">
-                    <span>Total de registros</span>
+                    <span className="summary-label">GESTIÓN DE MEDIA</span>
                     <strong>{medias.length}</strong>
                 </div>
+
+                 <div className="summary-icon">▶</div>
+              
             </div>
 
             <section className="module-card">
@@ -468,7 +471,7 @@ function Media() {
                                                     title="Editar"
                                                     onClick={() => prepararEdicion(media)}
                                                 >
-                                                    <i className="bi bi-pencil-square"></i>
+                                                   ✎
                                                 </button>
 
                                                 <button
@@ -477,7 +480,7 @@ function Media() {
                                                     title="Eliminar"
                                                     onClick={() => eliminarMedia(media)}
                                                 >
-                                                    <i className="bi bi-trash"></i>
+                                                    🗑
                                                 </button>
                                             </div>
                                         </td>

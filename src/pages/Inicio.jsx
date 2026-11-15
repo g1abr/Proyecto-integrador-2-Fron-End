@@ -1,4 +1,3 @@
-
 function Inicio() {
     return (
         <div>
@@ -6,20 +5,23 @@ function Inicio() {
                 <div>
                     <span className="eyebrow">PANEL DE CONTROL</span>
                     <h1>¡Bienvenido a CINE IU DIGITAL!</h1>
-                    <p>Administra la información de películas y series desde un solo lugar.</p>
-                </div>
-            </div>
-
-            <div className="welcome-card">
-                <div>
-                    <span className="welcome-tag">CATÁLOGO AUDIOVISUAL</span>
-                    <h2>Todo tu contenido, organizado.</h2>
                     <p>
-                        Gestiona géneros, directores, productoras, tipos
-                        y contenido multimedia de manera sencilla.
+                        Administra la información de películas y series desde un solo lugar.
                     </p>
                 </div>
-                <div className="welcome-emoji">🎥</div>
+                <br />
+                <div>
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/6p2VGBLWeMI?si=gHOCJml09yg2t2gs"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+                </div>
             </div>
 
             <h3 className="section-title">Módulos del sistema</h3>
@@ -51,7 +53,7 @@ function Inicio() {
 
                 <div className="dashboard-card">
                     <span>▶</span>
-                    <h4>Media</h4>
+                    <h4>Películas y Series</h4>
                     <p>Administra películas y series del catálogo.</p>
                 </div>
             </div>
