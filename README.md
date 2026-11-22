@@ -117,7 +117,7 @@ Actualmente, la conexión local está configurada de la siguiente manera:
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: 'https://api-catalogo-peliculas-iu.onrender.com/',
   headers: {
     'Content-Type': 'application/json'
   }
