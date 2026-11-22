@@ -43,7 +43,7 @@ function Sidebar() {
 
                 <div className="user-avatar">
                     <img
-                        src={logoIU}
+                        src="/src/assets/logo.jpeg"
                         alt="Logo IU Digital"
                     />
                 </div>
